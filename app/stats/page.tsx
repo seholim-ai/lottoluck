@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import StatsChart from '@/components/StatsChart';
-import { TrendingUp, snowflake, Flame } from 'lucide-react';
+import { TrendingUp, Snowflake, Flame } from 'lucide-react';
 
 export default function StatsPage() {
     const [stats, setStats] = useState<any>(null);
@@ -127,15 +127,3 @@ export default function StatsPage() {
     );
 }
 
-function Snowflake({ className, size }: { className?: string, size?: number }) {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" width={size || 24} height={size || 24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-            <line x1="2" x2="22" y1="12" y2="12" />
-            <line x1="12" x2="12" y1="2" y2="22" />
-            <path d="m20 16-4-4 4-4" />
-            <path d="m4 8 4 4-4 4" />
-            <path d="m16 4-4 4-4-4" />
-            <path d="m8 20 4-4 4 4" />
-        </svg>
-    );
-}
